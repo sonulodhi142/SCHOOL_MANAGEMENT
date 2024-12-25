@@ -4,8 +4,24 @@ studentData = []
 # function to add student
 
 def addStudent():
+    print("\nFill the student data to add new student:-\n ")
     name = input("Enter the student name:")
+    rollno = input("Enter the student roll NO.:")
+    age = input("Enter the student age:")
+    clas = input("Enter the student clas:")
+    phone = input("Enter the student phone:")
+
+    values = {
+        "name":name,
+        "rollno":rollno,
+        "age" : age,
+        "class": clas,
+        "phone" : phone
+    }
+    studentData.append(values)
+    print(f"\n The {name}'s data succesfully added:-\n\n")
     
+
 while True:
 
     print("<--WEL-COME TO THE SCHOOL MANAGEMENT PROGRAM---->\n")
