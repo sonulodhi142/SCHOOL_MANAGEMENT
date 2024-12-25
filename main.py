@@ -20,6 +20,18 @@ def addStudent():
     }
     studentData.append(values)
     print(f"\n The {name}'s data succesfully added:-\n\n")
+
+def displayData():
+    print("\n All student Data is given below:-\n")
+    count = 0
+    for data in studentData:
+        count = count + 1
+        print(f"\n The data of student {count}: \n")
+        print(f"name      : {data['name']}")
+        print(f"roll NO.  : {data['rollno']}")
+        print(f"class     : {data['class']}")
+        print(f"age       : {data['age']}")
+        print(f"phone no. : {data['phone']}\n\n")
     
 
 while True:
@@ -33,10 +45,12 @@ while True:
     choice = int(input("Enter any one choice::"))
 
     if choice == 1:
-        addStudent
+        addStudent()
+    elif choice == 4:
+        displayData()
     
     check = input("Do you want to perform more operation ? (y/n):")
-    if check == 'y':
+    if check == 'n':
         break
 
 
