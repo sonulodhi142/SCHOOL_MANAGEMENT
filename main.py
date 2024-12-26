@@ -32,7 +32,28 @@ def displayData():
         print(f"class     : {data['class']}")
         print(f"age       : {data['age']}")
         print(f"phone no. : {data['phone']}\n\n")
-    
+
+# fuction to update studentData
+def updateData():
+    print("\n Here you Search student with their rollno:- ")
+    search = input("Enter roll NO.::")
+    for data in studentData:
+        if data['rollno']==search:
+            print("\n Here are student prev. Data:-\n")
+            print(f"name      : {data['name']}")
+            print(f"roll NO.  : {data['rollno']}")
+            print(f"class     : {data['class']}")
+            print(f"age       : {data['age']}")
+            print(f"phone no. : {data['phone']}\n\n")
+            # here updata the StudentData
+            print("\n Here are student prev. Data:-\n")
+            data['name'] = input("Update Name::")
+            data['rollno'] = input("Update roll No.::")
+            data['class'] = input("Update class::")
+            data['age'] = input("Update age::")
+            data['phone'] = input("Update phone No.::")
+            print(f"\n The {data['name']}'s data succesfully Updated:-\n\n")
+
 
 while True:
 
@@ -46,6 +67,8 @@ while True:
 
     if choice == 1:
         addStudent()
+    elif choice == 2:
+        updateData()
     elif choice == 4:
         displayData()
     
