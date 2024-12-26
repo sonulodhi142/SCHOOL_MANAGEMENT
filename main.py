@@ -21,6 +21,8 @@ def addStudent():
     studentData.append(values)
     print(f"\n The {name}'s data succesfully added:-\n\n")
 
+
+# fuction for display all studentData
 def displayData():
     print("\n All student Data is given below:-\n")
     count = 0
@@ -54,10 +56,20 @@ def updateData():
             data['phone'] = input("Update phone No.::")
             print(f"\n The {data['name']}'s data succesfully Updated:-\n\n")
 
+# function for remove studentData
+def removeData():
+    print("\n Here you Remove student Data by Search with their rollno:- ")
+    search = input("Enter roll NO.::")
+    for data in studentData:
+        if data['rollno']==search:
+            print(f"\n The {data['name']}'s data succesfully Deleted:-\n")
+            studentData.remove(data)
+
+        
 
 while True:
 
-    print("<--WEL-COME TO THE SCHOOL MANAGEMENT PROGRAM---->\n")
+    print("\n\n<--WEL-COME TO THE SCHOOL MANAGEMENT PROGRAM---->\n")
     print("Click 1 to add student data ")
     print("Click 2 to update student data ")
     print("Click 3 to remove student data ")
@@ -69,8 +81,12 @@ while True:
         addStudent()
     elif choice == 2:
         updateData()
+    elif choice == 3:
+        removeData()
     elif choice == 4:
         displayData()
+    else:
+        print("\n Please Enter vailed Choice:-\n")
     
     check = input("Do you want to perform more operation ? (y/n):")
     if check == 'n':
