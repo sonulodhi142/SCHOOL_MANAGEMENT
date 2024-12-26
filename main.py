@@ -71,7 +71,7 @@ def searchData():
     search = input("Enter roll NO.::")
     for data in studentData:
         if data['rollno']==search:
-            print("\n Here are student prev. Data:-\n")
+            print("\n The Data of studen is here:-\n")
             print(f"name      : {data['name']}")
             print(f"roll NO.  : {data['rollno']}")
             print(f"class     : {data['class']}")
