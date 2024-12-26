@@ -48,7 +48,7 @@ def updateData():
             print(f"age       : {data['age']}")
             print(f"phone no. : {data['phone']}\n\n")
             # here updata the StudentData
-            print("\n Here are student prev. Data:-\n")
+            print("\n Here you can update data:-\n")
             data['name'] = input("Update Name::")
             data['rollno'] = input("Update roll No.::")
             data['class'] = input("Update class::")
