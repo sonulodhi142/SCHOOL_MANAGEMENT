@@ -97,7 +97,7 @@ while True:
         removeData()
     elif choice == 4:
         displayData()
-    elif choice == 4:
+    elif choice == 5:
         searchData()
     else:
         print("\n Please Enter vailed Choice:-\n")
