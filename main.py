@@ -37,7 +37,7 @@ def displayData():
 
 # fuction to update studentData
 def updateData():
-    print("\n Here you Search student with their rollno:- ")
+    print("\n Here you Update-Date to Search student with their rollno:- ")
     search = input("Enter roll NO.::")
     for data in studentData:
         if data['rollno']==search:
@@ -65,6 +65,18 @@ def removeData():
             print(f"\n The {data['name']}'s data succesfully Deleted:-\n")
             studentData.remove(data)
 
+# fuction to display specific studentData
+def searchData():
+    print("\n Here you Search student with their rollno:- ")
+    search = input("Enter roll NO.::")
+    for data in studentData:
+        if data['rollno']==search:
+            print("\n Here are student prev. Data:-\n")
+            print(f"name      : {data['name']}")
+            print(f"roll NO.  : {data['rollno']}")
+            print(f"class     : {data['class']}")
+            print(f"age       : {data['age']}")
+            print(f"phone no. : {data['phone']}\n\n")
         
 
 while True:
@@ -85,6 +97,8 @@ while True:
         removeData()
     elif choice == 4:
         displayData()
+    elif choice == 4:
+        searchData()
     else:
         print("\n Please Enter vailed Choice:-\n")
     
